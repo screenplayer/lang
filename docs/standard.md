@@ -8,17 +8,17 @@ ScreenPlay is language for writing screen play. It has plain text formatting syn
 
 ### Meta data
 
-When writing screen play, usually authors will start with some meta data, like title, author name, draft date and so on. In ScreenPlay, the format of meta data is key={value}. And value can be string or multiple string separate with **;**.
+When writing screen play, usually authors will start with some meta data, like title, author name, draft date and so on. In ScreenPlay, the format of meta data is ${key}={value}. And value can be string or multiple string separate with **;**.
 
-    Title={Document of ScreenPlay}
-    Credit={Written by}
-    Authorr={Jacob Chang}
-    Draft date={06/20/2019}
-    Contact={
+    ${Title}={Document of ScreenPlay}
+    ${Credit}={Written by}
+    ${Authorr}={Jacob Chang}
+    ${Draft date}={06/20/2019}
+    ${Contact}={
         mrchangji@outlook.com
         https://github.com/ScreenPlayer/lang.git
     }
-    Characters={Character A; Character B}
+    ${Characters}={Character A; Character B}
 
 ### Scene Heading
 
@@ -39,12 +39,13 @@ Character starts with **@{** and ends with **}**
 
 ### Dialogue
 
-Dialogue is surronded in **"**. For simultaneous dialogue, you can use **&** to combine multiple dialogue
+Dialogue is surronded in **"**. For simultaneous dialogue, you can use **&&** to combine multiple dialogue
 
     @{CharacterA} "Hello, B"
     @{CharacterB} "Hello, A"
 
-    @{CharacterA} "Hello" & @{CharacterB} "Hello"
+    @{CharacterA} "Hey, B" && @{CharacterB} "Hey A"
+    @{CharacterA} && @{CharacterB} "Hey"
 
 ### Parenthetical
 
