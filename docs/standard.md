@@ -6,9 +6,9 @@ ScreenPlay is language for writing screen play. It has plain text formatting syn
 
 ## Syntax
 
-### Meta data
+### Defination
 
-When writing screen play, usually authors will start with some meta data, like title, author name, draft date and so on. In ScreenPlay, the format of meta data is ${key}={value}. And value can be string or multiple string separate with **;**.
+When writing screen play, usually authors will start with some defination, like title, author name, draft date and so on. In ScreenPlay, the format of defination is \${key}={value}. And value can be string or multiple string separate with **;**.
 
     ${Title}={Document of ScreenPlay}
     ${Credit}={Written by}
@@ -39,13 +39,13 @@ Character starts with **@{** and ends with **}**
 
 ### Dialogue
 
-Dialogue is surronded in **"**. For simultaneous dialogue, you can use **&&** to combine multiple dialogue
+Dialogue is started with **::**, words are surronded by **"**. For simultaneous dialogue, you can use **&&** to combine multiple dialogue or multiple characters
 
     @{CharacterA} "Hello, B"
     @{CharacterB} "Hello, A"
 
     @{CharacterA} "Hey, B" && @{CharacterB} "Hey A"
-    @{CharacterA} && @{CharacterB} "Hey"
+    @{CharacterA && CharacterB} "Hey"
 
 ### Parenthetical
 
@@ -58,3 +58,7 @@ Parentheticals are wrapped in parentheses
 Transitions are start with ">>"
 
     >> CUT TO:
+
+### Action
+
+All other paragraphs will be treated as actions.
