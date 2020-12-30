@@ -6,14 +6,14 @@ ScreenPlay is language for writing screen play. It has plain text formatting syn
 
 ## Syntax
 
-### Defination
+### Definiton
 
-When writing screen play, usually authors will start with some defination, like title, author name, draft date and so on. In ScreenPlay, the format of defination is \${key}={value}. And value can be string or multiple string separate with **;**.
+When writing screen play, authors can start with definitons, like title, author name, draft date and so on. In ScreenPlay, the format of definiton is *${key}={value}*. And value can be string or multiple string separate with **;**.
 
     ${Title}={Document of ScreenPlay}
     ${Credit}={Written by}
-    ${Authorr}={Jacob Chang}
-    ${Draft date}={06/20/2019}
+    ${Author}={Jacob Chang}
+    ${Draft Date}={06/20/2019}
     ${Contact}={
         mrchangji@outlook.com
         https://github.com/ScreenPlayer/lang.git
@@ -22,7 +22,7 @@ When writing screen play, usually authors will start with some defination, like 
 
 ### Scene Heading
 
-Scene Heading are strings wrapped by brackets.
+Scene Heading are strings wrapped by square brackets.
 
     [ENT]
     [INT]
@@ -33,25 +33,25 @@ Scene Heading are strings wrapped by brackets.
 
 ### Characters
 
-Character starts with **@{** and ends with **}**
+Character starts with **@{** and ends with **}**, similar to what you do on social media.
 
     @{Character}
 
 ### Dialogue
 
-Dialogue is started with **::**, words are surronded by **"**. For simultaneous dialogue, you can use **&&** to combine multiple dialogue or multiple characters
+Dialogue is started with **CharacterA**, words are surronded by **"**. For simultaneous dialogue, you can use **&&** to combine multiple dialogues or multiple characters
 
-    @{CharacterA} "Hello, B"
-    @{CharacterB} "Hello, A"
+    @{Character A} "Hello, B"
+    @{Character B} "Hello, A"
 
-    @{CharacterA} "Hey, B" && @{CharacterB} "Hey A"
-    @{CharacterA && CharacterB} "Hey"
+    @{Character A} "Hey, B" && @{Character B} "Hey A"
+    @{Character A && Character B} "Morning"
 
 ### Parenthetical
 
 Parentheticals are wrapped in parentheses
 
-    @{Character}(with sad face) "Long time no see"(pause)"Where have you been"
+    @{Character}(with sad face) "Long time no see" (pause) "Where have you been"
 
 ### Transition
 
